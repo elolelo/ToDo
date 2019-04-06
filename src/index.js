@@ -8,7 +8,7 @@ var destination =document.querySelector("#container");
 
 ReactDOM.render(
     <div> 
-        <p>hELLO</p>
+        <h2>Welcome to my basic To Do application :) </h2>
         <TodoList/>
        { /*  <TodoItems/>  */} 
     </div>,
