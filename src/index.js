@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import TodoList from "./TodoList";
-import TodoItems from "./TodoItems";
+import "./TodoList.css";
 
 var destination =document.querySelector("#container");
 

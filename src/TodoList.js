@@ -1,5 +1,6 @@
-import React,{Component} from "react";
-import TodoItems from "./TodoItems";
+import React,{Component} from 'react';
+import TodoItems from './TodoItems';
+import './TodoList.css';
 
 class TodoList extends Component{
     constructor(props){
@@ -8,6 +9,7 @@ class TodoList extends Component{
             items:[]
         };
         this.addItem = this.addItem.bind(this);
+        this.deleteItem = this.deleteItem.bind(this);
     }
     addItem(e){
         if (this._inputElement !== ""){
@@ -22,7 +24,6 @@ class TodoList extends Component{
                 };
             });
         }
-    
         {/*this clears the value after it has been entered  */}
         this._inputElement.value = ""; 
 
@@ -31,6 +32,15 @@ class TodoList extends Component{
         e.preventDefault();
     }
 
+    deleteItem(key){
+        var filteredItems =this.state.items.filter(function(item){
+            return (item.key !== key)
+        });
+
+        this.setState({
+            items: filteredItems
+        });
+    }
     render(){
         return (
             <div className="todoListMain">
@@ -43,7 +53,8 @@ class TodoList extends Component{
                     </form>
             </div>
 
-            <TodoItems entries = {this.state.items}/>
+            <TodoItems entries = {this.state.items}
+                        delete={this.deleteItem} />
             </div>
         );
     }
