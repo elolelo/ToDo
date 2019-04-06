@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import TodoItems from './TodoItems';
 import './TodoList.css';
-import Flipmove from 'react-flip-move';
+
 
 class TodoList extends Component{
     constructor(props){
