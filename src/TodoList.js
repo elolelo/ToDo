@@ -12,6 +12,14 @@ class TodoList extends Component{
     }
 
     addItem(e){
+        if (this._inputElement != ""){
+            let newItem = {
+                text: this._inputElement.value,
+                key: Date.now(),
+            };
+
+
+        }
     }
     render(){
         return (
