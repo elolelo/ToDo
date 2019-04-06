@@ -10,17 +10,21 @@ class TodoList extends Component{
         
         this.addItem = this.addItem.bind(this);
     }
-
     addItem(e){
         if (this._inputElement != ""){
             let newItem = {
                 text: this._inputElement.value,
-                key: Date.now(),
+                key: Date.now()
             };
 
-
+            this.setState((prevState) => {
+                return {
+                    items: prevState.items.concat(newItem)
+                };
+            });
         }
     }
+
     render(){
         return (
             <div className="todoListMain">
