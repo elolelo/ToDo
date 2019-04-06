@@ -1,13 +1,16 @@
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom";
 import "./index.css";
 import TodoList from "./TodoList";
+import TodoItems from "./TodoItems";
 
 var destination =document.querySelector("#container");
 
-ReactDom.render(
+ReactDOM.render(
     <div> 
+        <p>hELLO</p>
         <TodoList/>
+       { /*  <TodoItems/>  */} 
     </div>,
     destination
 );

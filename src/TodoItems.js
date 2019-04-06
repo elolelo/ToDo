@@ -1,16 +1,16 @@
 import React, {Component } from "react";
 
 class TodoItems extends Component {
-    cerateTasks(items){
+    createTasks(items){
         return <li key={items.key}>{items.text}</li>
     }
 
     render(){
         var todoEntries = this.props.entries;
-        var listItems = todoEntries.map(this.cerateTasks);
+        var listItems = todoEntries.map(this.createTasks);
         
         return (
-        <ul classNames ="theList">
+        <ul className="theList">
         {listItems}
         </ul>
         );

@@ -4,11 +4,9 @@ import TodoItems from "./TodoItems";
 class TodoList extends Component{
     constructor(props){
         super(props);
-
         this.state = {
             items:[]
         };
-        
         this.addItem = this.addItem.bind(this);
     }
     addItem(e){
@@ -24,6 +22,7 @@ class TodoList extends Component{
                 };
             });
         }
+    
         {/*this clears the value after it has been entered  */}
         this._inputElement.value = ""; 
 
@@ -37,8 +36,8 @@ class TodoList extends Component{
             <div className="todoListMain">
             <div className="header">
                     <form onSubmit={this.addItem}>
-                        <input ref={(a) => this._inputElement}
-                                placeholder = "enter task">
+                        <input ref={(a) => this._inputElement = a}
+                                placeholder = "Enter task">
                         </input>
                         <button type="submit">add</button>
                     </form>
