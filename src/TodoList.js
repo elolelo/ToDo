@@ -4,7 +4,9 @@ import './TodoList.css';
 
 
 class TodoList extends Component{
+
     constructor(props){
+        {/*  I am setting states here!*/}
         super(props);
         this.state = {
             items:[]
@@ -47,8 +49,11 @@ class TodoList extends Component{
             <div className="todoListMain">
             <div className="header">
                     <form onSubmit={this.addItem}>
-                        <input ref={(a) => this._inputElement = a}
+                        <input style={{border:'solid'}} ref={(a) => this._inputElement = a}
                                 placeholder = "Enter task">
+                        </input>
+                        <input style={{border:'solid'}}ref={(b) => this._inputElement = b}
+                                placeholder = "Enter task description">
                         </input>
                         <button type="submit">add</button>
                     </form>
