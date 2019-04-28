@@ -52,9 +52,7 @@ class TodoList extends Component{
                         <input style={{border:'solid'}} ref={(a) => this._inputElement = a}
                                 placeholder = "Enter task">
                         </input>
-                        <input style={{border:'solid'}}ref={(b) => this._inputElement = b}
-                                placeholder = "Enter task description">
-                        </input>
+                        
                         <button type="submit">add</button>
                     </form>
             </div>
