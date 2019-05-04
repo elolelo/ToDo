@@ -2,11 +2,8 @@ import React,{Component} from 'react';
 import TodoItems from './TodoItems';
 import './TodoList.css';
 
-
 class TodoList extends Component{
-
     constructor(props){
-        {/*  I am setting states here!*/}
         super(props);
         this.state = {
             items:[]
@@ -44,21 +41,25 @@ class TodoList extends Component{
             items: filteredItems
         });
     }
+
     render(){
         return (
             <div className="todoListMain">
             <div className="header">
+
                     <form onSubmit={this.addItem}>
                         <input style={{border:'solid'}} ref={(a) => this._inputElement = a}
-                                placeholder = "Enter task">
+                                placeholder = "Enter your task">
                         </input>
                         
-                        <button type="submit">add</button>
-                    </form>
+                        <button type="submit">Add</button>   
+                    </form> 
+                    
             </div>
 
             <TodoItems entries = {this.state.items}
                         delete={this.deleteItem} />
+            
             </div>
         );
     }
